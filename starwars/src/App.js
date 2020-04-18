@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import PeopleCard from './components/PeopleCard'
-import axios from 'axios'
+import axios from 'axios';
 
 
 const App = () => {
@@ -14,9 +14,9 @@ const App = () => {
   // sync up with, if any.
   useEffect(() => {
     axios
-        .get('https://swapi.co/api/people/')
+        .get('https://swapi.py4e.com/api/people/1/')
         .then(response => {
-        
+        console.log(response);
             setPeople(response.data.results);
         })
         .catch(error => {
@@ -30,8 +30,7 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
       {people.map((person, index)  => (
           <PeopleCard person={person} key={index}/>
-      ))}
-     
+      ))} 
     </div>
   );
 }
