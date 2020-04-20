@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 .Header {
   position: fixed;
@@ -8,3 +9,16 @@
   margin-left: 40rem;
 }
 /* write your parent styles in here for your App.js */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 30px;
+  color: black;
+  width: 400px;
+
+}
+
+.container {
+  display: flex;
+}
